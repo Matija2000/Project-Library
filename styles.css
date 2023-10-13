@@ -1,0 +1,33 @@
+.container {
+  display: grid;
+  width: 500px;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 3px;
+}
+
+.container > div {
+  background-color: orange;
+  height: 100px;
+}
+
+form {
+  visibility: hidden;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+
+.add_book {
+  visibility: hidden;
+}
+
+.book_display {
+  position: relative;
+}
+
+.remove {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 5px;
+}
