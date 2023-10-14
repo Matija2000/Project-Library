@@ -5,36 +5,50 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Project-Library</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700;900&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <body>
+    <div class="main">
+      <h1>Personal Library</h1>
+      <button class="new_book">NEW BOOK</button>
+
+      <form id="myForm">
+        <fieldset>
+          <legend>Book's information</legend>
+          <div>
+            <label for="author">Author:*</label>
+            <input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Enter author's name"
+              required
+            />
+          </div>
+          <div>
+            <label for="title">Title:*</label>
+            <input
+              type="text"
+              id="title"
+              name="book_title"
+              placeholder="Book's title"
+              required
+            />
+          </div>
+          <div>
+            <label for="nOfPages">Number of pages:*</label>
+            <input type="number" id="nOfPages" name="nOfPages" required />
+          </div>
+        </fieldset>
+      </form>
+      <button type="submit" form="myForm" class="submit">Submit</button>
+    </div>
     <div class="container"></div>
-
-    <button class="new_book">NEW BOOK</button>
-    <form action="">
-      <fieldset>
-        <legend>Book's information</legend>
-        <label for="author">Author:*</label>
-        <input
-          type="text"
-          id="author"
-          name="author"
-          placeholder="Enter author's name"
-          required
-        />
-        <label for="title">Title:*</label>
-        <input
-          type="text"
-          id="title"
-          name="book_title"
-          placeholder="Book's title"
-          required
-        />
-        <label for="nOfPages">Number of pages:*</label>
-        <input type="number" id="nOfPages" name="nOfPages" required />
-      </fieldset>
-    </form>
-    <button class="add_book">Submit</button>
-
     <script src="script.js"></script>
   </body>
 </html>
