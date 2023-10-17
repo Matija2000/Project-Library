@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const form = document.querySelector("form");
+const checkBox = document.querySelector("#isRead");
 
 let myLibrary = [];
 
@@ -33,19 +34,27 @@ function loopThroughArray() {
     div.appendChild(bookDisplay);
     const read = document.createElement("button");
     read.classList.toggle("read");
-    read.textContent = "read";
+    if (checkBox.checked === true) {
+      read.textContent = "read";
+      read.style = "background-color:lightgreen";
+    } else {
+      read.textContent = "not read";
+      read.style = "background-color:red";
+    }
+
     read.addEventListener("click", () => {
       if (read.textContent === "read") {
         read.style = "background-color:red";
         read.textContent = "not read";
       } else {
-        read.style = "background-color:light-green";
+        read.style = "background-color:lightgreen";
         read.textContent = "read";
       }
     });
     div.appendChild(read);
   });
 }
+
 loopThroughArray();
 
 const newBookButton = document.querySelector(".new_book");

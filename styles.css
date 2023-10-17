@@ -66,7 +66,7 @@ fieldset > div > :first-child {
 }
 .read {
   left: 0;
-  background-color: lightgreen;
+  /* background-color: lightgreen; */
   border: none;
   padding: 5px 20px;
   border-radius: 0.2rem;
@@ -120,4 +120,10 @@ body {
 
 .new_book:hover {
   text-decoration: underline;
+}
+
+fieldset > div:last-child {
+  margin-top: 20px;
+  text-align: center;
+  justify-content: center;
 }
